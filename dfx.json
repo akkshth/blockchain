@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "projectmine_backend": {
+      "main": "src/projectmine_backend/main.mo",
+      "type": "motoko"
+    },
+    "projectmine_frontend": {
+      "dependencies": [
+        "projectmine_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/projectmine_frontend/src/index.html"
+      },
+      "source": [
+        "src/projectmine_frontend/assets",
+        "dist/projectmine_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
